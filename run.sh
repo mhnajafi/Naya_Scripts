@@ -24,9 +24,13 @@ uf2file=/home/mhn/zephyrproject/applications/uf2script/flash.uf2
 uf2dist=/media/mhn/XIAO-SENSE/flash.uf2
 uf2dir=/media/mhn/XIAO-SENSE
 
+slot_size=0x54000
+Slot1_address=0x8c000
+
+
 if [ -f "$infile" ]; then
-	$imgtool sign --key $key -E $encrypt --header-size 0x200 -S 0x54000 --version $ver --confirm --pad  $infile $outfile
-	python3 $uf2  $outfile  -c -b 0x8c000 -f 0xADA52840
+	$imgtool sign --key $key -E $encrypt --header-size 0x200 -S $slot_size --version $ver --confirm --pad  $infile $outfile
+	python3 $uf2  $outfile  -c -b $Slot1_address -f 0xADA52840
 else
 	echo -e "${RED}============( Error )=============${NC}"
 	echo -e "${RED}binary file does not exist.${NC}"	
