@@ -43,4 +43,3 @@ else
 	echo -e "${RED}UF2 Directory does not exist.${NC}"
 fi
 
-
