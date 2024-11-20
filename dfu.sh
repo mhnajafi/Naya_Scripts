@@ -2,25 +2,20 @@
 
 ver=1.23
 
-imgtool=/home/mhn/zephyrproject/bootloader/mcuboot/scripts/imgtool.py
-key=/home/mhn/zephyrproject/bootloader/mcuboot/mhn_pub.pem
-encrypt=/home/mhn/zephyrproject/bootloader/mcuboot/mhn_prv.pem
-
-infile=/home/mhn/zephyrproject/applications/blinky/build/zephyr/zephyr.bin
-outfile=/home/mhn/zephyrproject/applications/blinky/build/zephyr/zephyr.signed.confirmed.encrypted.bin
-
-
-
-slot_size=0x34000
-Slot1_address=0x4a000
-
-
-
 
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
-uf2=$SCRIPT_DIR/uf2conv.py
-uf2file=$SCRIPT_DIR/flash.uf2
-uf2dist=$uf2dir/flash.uf2
+imgtool=/home/mhn/zephyrproject/bootloader/mcuboot/scripts/imgtool.py
+key=$SCRIPT_DIR/k_pub.pem
+encrypt=$SCRIPT_DIR/k_prv.pem
+
+infile=/home/mhn/zephyrproject/applications/blinky/build/zephyr/zephyr.bin
+outfile=$SCRIPT_DIR/firmware.bin
+
+
+slot_size=0x57000
+
+
+
 # Define red color code
 RED='\033[0;31m'
 NC='\033[0m' 

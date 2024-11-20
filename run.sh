@@ -3,16 +3,16 @@
 ver=1.23
 
 imgtool=/home/mhn/zephyrproject/bootloader/mcuboot/scripts/imgtool.py
-key=/home/mhn/zephyrproject/bootloader/mcuboot/root-rsa-2048.pem
-encrypt=/home/mhn/zephyrproject/bootloader/mcuboot/enc-rsa2048-priv.pem
+key=/home/mhn/zephyrproject/bootloader/mcuboot/mhn_pub.pem
+encrypt=/home/mhn/zephyrproject/bootloader/mcuboot/mhn_prv.pem
 
 infile=/home/mhn/zephyrproject/applications/blinky/build/zephyr/zephyr.bin
 outfile=/home/mhn/zephyrproject/applications/blinky/build/zephyr/zephyr.signed.confirmed.encrypted.bin
 
 uf2dir=/media/mhn/XIAO-SENSE
 
-slot_size=0x54000
-Slot1_address=0x8c000
+slot_size=0x34000
+Slot1_address=0x4a000
 
 
 
