@@ -4,11 +4,11 @@ ver=1.23
 
 
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
-imgtool=/home/mhn/zephyrproject/bootloader/mcuboot/scripts/imgtool.py
+imgtool=$SCRIPT_DIR/imgtool.py
 key=$SCRIPT_DIR/k_pub.pem
 encrypt=$SCRIPT_DIR/k_prv.pem
 
-infile=/home/mhn/zephyrproject/applications/blinky/build/zephyr/zephyr.bin
+infile=$SCRIPT_DIR/zephyr.bin
 outfile=$SCRIPT_DIR/firmware.bin
 
 
