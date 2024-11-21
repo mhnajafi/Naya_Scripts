@@ -11,6 +11,8 @@ encrypt=$SCRIPT_DIR/k_prv.pem
 infile=$SCRIPT_DIR/zephyr.bin
 outfile=$SCRIPT_DIR/firmware.bin
 
+vipi= 2fe3:0005
+
 
 slot_size=0x57000
 
@@ -29,7 +31,7 @@ else
 fi
 
 if [ 1 ]; then
-	sudo dfu-util -a 2 -E 1 -D $outfile
+	sudo dfu-util -a 2 -E 1 -D $outfile -d $vipi
 	echo -e "${GREEN}Image copied to Device.${NC}"
 	echo -e "${GREEN}============( Done )=============${NC}"
 else
