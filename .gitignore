@@ -1,3 +1,6 @@
 FlashMemory.bin
 firmware.bin
 old/
+firmware/firmware.bin
+firmware/FlashMemory.bin
+firmware/module_fw.sfp

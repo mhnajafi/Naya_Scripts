@@ -3,11 +3,16 @@
 
 app_dir=/home/mhn/zephyrproject/applications/blinky
 
+
+
+
+#=================================================
+
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 imgtool=$SCRIPT_DIR/imgtool/imgtool.py
 key=$SCRIPT_DIR/keys/k_pub.pem
 encrypt=$SCRIPT_DIR/keys/k_prv.pem
-outfile=$SCRIPT_DIR/firmware.bin
+outfile=$SCRIPT_DIR/firmware/firmware.bin
 
 CONFIG_FILE="$app_dir/build/zephyr/.config"
 
