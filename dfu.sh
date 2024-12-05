@@ -92,7 +92,7 @@ fi
 
 if sudo dfu-util --list | grep -q "Found Runtime"; then
     if sudo dfu-util --list | grep -q $vipi; then
-		if sudo dfu-util -a 2 -E 1 -D $outfile -d $vipi; then 
+		if sudo dfu-util -a 3 -E 1 -D $outfile -d $vipi; then 
 			echo -e "${GREEN}Image copied to Device.${NC}"
 			echo -e "${GREEN}============( Done )=============${NC}"
 		else
